@@ -1,8 +1,15 @@
 language: node_js
 node_js:
-  - 'stable'
+- stable
 install: npm install
 services:
-  - mongodb
+- mongodb
 script: npm test
 after_success: npm run coverage
+deploy:
+  provider: heroku
+  api_key:
+    secure: ARtlpZRwRgpg54g38cfxTXzNCiVZHm3gNb8K1/EAZB04jj3Cln4PR6ogPc4qqhXH/B/kDUmdVSPV8BnFulrOJcd2B50RSlRtulRffSwDkY1EE0+x26ICYSfhVzWmrKiZnRqBjXHbwKn4o+Y+MJ6cOwfBE74J3T/FJHITm6dHtT7gJA66tpB9NMVv5jqa/aO/PQr08xryYBv42M6DdOdbNWnRMGSTKsxYnbEb7/cItunIKVP8JPMZF8kmSH+bjI6iA7StsOtWPGU34kY9v+BJBUrkYx5QmVrieX849VdrcuQ9+/2NDN5t/8m69cew/9TWZNG3gxqhn1aTBftca+NjI9WXD1iNB3KU0YeS4XLnmwXyq8Uop5zYrVpjxeZrjbbQkzja42+YRnjd7FOaFc84CD+sJ2XqiNLa4rVhYgfykq710y7b30FrwysN9aXv9tHVeJCkKiL67a+V4lvgJtwkhhi1JOio5ooQFYc3SaN5vHGtZM3AlIO7OmA8L8a6GWfycKbFWu0tSa9Xx4znbrXLm4sZddQ2LjeLKreF3Xr3hGTyIO1QkoPZp4Dok53gqmJa076voqxswCs6le3EVx3klHuYLUa+PZCGcg5K+jUfkH7qilCo3RJaJX+HVCF3hkKqcx0AhzXU9sJ5Fmp7EhshlKhY0GjBu1trsCmRo1W04Bo=
+  app: my-app-projects
+  on:
+    repo: GabrielleEaston/mongodb-mongoose-express-ci
