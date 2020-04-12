@@ -8,7 +8,7 @@
 ## Getting Started
 
 - Fork
-- Clone
+- Clone.
 
 ## Learning Objectives
 
