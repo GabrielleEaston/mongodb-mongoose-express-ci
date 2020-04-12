@@ -13,3 +13,5 @@ deploy:
   app: my-app-projects
   on:
     repo: GabrielleEaston/mongodb-mongoose-express-ci
+    run:
+    - "node seed/userProjects.js"
